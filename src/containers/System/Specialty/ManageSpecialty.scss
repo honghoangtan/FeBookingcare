@@ -1,0 +1,23 @@
+
+
+.manage-specialty-container {
+
+    .specialty-infor {
+        .preview-img-container {
+            .preview-image {
+                height: 50px;
+                width: 70%;
+                border: 1px solid #ddd;
+                background: center center no-repeat;
+                background-size: contain;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .create-specialty {
+        padding: 0 33px;
+    }
+
+}
+

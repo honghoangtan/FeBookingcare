@@ -1,4 +1,27 @@
 {
+    "homeHeader": {
+        "speciality": "Medical speciality",
+        "searchdoctor": "Find a doctor by speciality",
+        "health-facility": "Helth facility",
+        "select-room": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Checkup package",
+        "check-health": "General health check",
+        "support": "Support",
+        "welcome": "Welcome"
+
+    },
+    "banner": {
+        "title1": "HEALTHCARE PLATFORM",
+        "title2": "COMPREHENSIVE HEALTHCARE",
+        "examination-specialist": "Examination specialist",
+        "remote-examination": "Remote examination",
+        "general-examination": "General examination",
+        "medical-test": "Medical test",
+        "mental-health": "Mental health",
+        "dental-examination": "Dental examination"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",
@@ -31,13 +54,51 @@
             "system-administrator": {
                 "header": "System Administrator",
                 "user-manage": "User manage",
-                "product-manage": "Package manage",
+                "user-redux": "Manage user using redux",
                 "register-package-group-or-account": "Register service package for group/account"
             },
             "system-parameter": {
                 "header": "System-parameter"
             }
+        },
+
+        "admin": {
+            "manage-user": "Manage user",
+            "manage-doctor": "Manage doctor",
+            "manage-admin": "Manage admin",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD user redux",
+
+            "clinic": "Clinic",
+            "manage-clinic": "Manage clinic",
+
+            "specialty": "Specialty",
+            "manage-specialty": "Manage specialty",
+
+            "handbook": "Hand book",
+            "manage-handbook": "Manage hand book"
+        },
+
+        "doctor": {
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Management of sick patients"
+
         }
+    },
+    "manage-user": {
+        "add-user": "Add user",
+        "password": "Password",
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "address": "Address",
+        "phonenumber": "Phonenumber",
+        "gender": "Gender",
+        "role": "Role",
+        "position": "Position",
+        "image": "Avatar",
+        "save": "Save",
+        "edit": "Edit user"
+
     },
     "system": {
         "user-manage": {
@@ -115,6 +176,89 @@
             "remove-assign-success": "Unassign service package to customer successfully",
             "remove-assign-fail": "Fail to unassign service package to customer",
             "sure-delete-assign": "Are you sure to unassign service package to customer?"
+        }
+    },
+    "homepage": {
+        "out-standing-doctor": "Out standing doctor",
+        "more-infor": "More infor",
+        "title-specialties": "Popular Specialties",
+        "section-about" : "Media talks about hoangtan (draw)",
+        "hand-book": "Handbook",
+        "recruitment": "Recruitment",
+        "privacy-policy": "Privacy policy",
+        "operating-regulations": "Operating Regulations",
+        "contact-for-cooperation": "Contact for cooperation",
+        "terms-of-use": "Terms of use",
+        "frequently-asked-questions": "Frequently asked questions",
+
+        
+        "content-sponsorship-partners": "Content sponsorship partners",
+        "mental-health": "Sponsor the content section 'mental health'",
+        "bernard": "Bernard International Intensive Medical System",
+        "specialized-medicine": "Sponsor the content section 'specialized medicine'",
+        "doctor-check": "Doctor Check - Screening for Diseases to Live Longer",
+        "general-health": "Sponsor the content section 'general health'"
+
+
+    },
+
+    "manage-schedule": {
+        "title": "Manage doctor's examination plan",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save-schedule": "Save schedule"
+
+    },
+
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule"
+        },
+        "no-schedule": "The doctor does not have an appointment during this time, please choose another time",
+
+        "choose": "Choose",
+        "book-free": "and book (free)",
+
+        "extra-infor-doctor": {
+            "text-address": "Examination address",
+            "text-price": "EXAMINATION PRICE",
+            "detail": "See details",
+            "text-price-lowercase": "Examination price",
+            "payment": "The hospital has payment by form ",
+            "hide-price": "Hide price list"
+
+        },
+        "booking-modal": {
+            "title": "TINFORMATION TO BOOK A MEDICAL EXAMINATION SCHEDULE",
+            "patient-name": "Patient's full name (required)",
+            "phone": "Phone number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason",
+            "birthday": "Birthday",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "CAncel"
+        }
+
+    },
+
+    "admin": {
+        "manage-doctor": {
+            "title": "CREATE MORE INFORMATION DOCTOR",
+            "select-doctor": "Choose doctor",
+            "intro": "Introductory information",
+            "add": "Create information",
+            "save": "Save information",
+            "price": "Choose price",
+            "payment": "Select a payment method",
+            "province": "Select province",
+            "nameClinic": "Clinic name",
+            "addressClinic": "Clinic address",
+            "note": "Note",
+            "choose-Specialty": "Choose Specialty",
+            "choose-clinic": "Choose Clinic"
+
         }
     }
 }

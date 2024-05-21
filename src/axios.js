@@ -1,64 +1,85 @@
 import axios from 'axios';
-import _ from 'lodash';
-import config from './config';
 
+import { toast } from 'react-toastify';
+
+// Set config defaults when creating the instance
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_BACKEND_URL,
-    withCredentials: true
+    baseURL: 'http://localhost:6969',
 });
 
-const createError = (httpStatusCode, statusCode, errorMessage, problems, errorCode = '') => {
-    const error = new Error();
-    error.httpStatusCode = httpStatusCode;
-    error.statusCode = statusCode;
-    error.errorMessage = errorMessage;
-    error.problems = problems;
-    error.errorCode = errorCode + "";
-    return error;
-};
+instance.defaults.withCredentials = true;
 
-export const isSuccessStatusCode = (s) => {
-    // May be string or number
-    const statusType = typeof s;
-    return (statusType === 'number' && s === 0) || (statusType === 'string' && s.toUpperCase() === 'OK');
-};
+// // Alter defaults after instance has been created
+// instance.defaults.headers.common['Authorization'] = 'AUTH_TOKEN 123';
 
+// Can thiệp vào quá trình gửi request lên Server, can thiệp vào trình trước khi gửi request về
+
+// Add a request interceptor
+instance.interceptors.request.use(
+    function (config) {
+        // Do something before request is sent
+        return config;
+    },
+    function (error) {
+        // Do something with request error
+        return Promise.reject(error);
+    },
+);
+
+// Add a response interceptor
 instance.interceptors.response.use(
-    (response) => {
-        // Thrown error for request with OK status code
-        const { data } = response;
-        if (data.hasOwnProperty('s') && !isSuccessStatusCode(data['s']) && data.hasOwnProperty('errmsg')) {
-            return Promise.reject(createError(response.status, data['s'], data['errmsg'], null, data['errcode'] ? data['errcode'] : ""));
-        }
-
-        // Return direct data to callback
-        if (data.hasOwnProperty('s') && data.hasOwnProperty('d')) {
-            return data['d'];
-        }
-        // Handle special case
-        if (data.hasOwnProperty('s') && _.keys(data).length === 1) {
-            return null;
-        }
+    function (response) {
+        // Any status code that lie within the range of 2xx cause this function to trigger
+        // Do something with response data
         return response.data;
     },
-    (error) => {
-        const { response } = error;
-        if (response == null) {
-            return Promise.reject(error);
+    function (error) {
+        // Any status codes that falls outside the range of 2xx cause this function to trigger
+        // Do something with response error
+
+        const status = error && error.response ? error.response.status : 500;
+
+        switch (status) {
+            // authentication (token related issues)
+            case 401: {
+                toast.error('Unauthorized the user. Please login...');
+                // return Promise.reject(error);
+                // window.location.href = '/login';
+                return error.response.data;
+            }
+
+            // forbidden (permission related issues)
+            case 403: {
+                toast.error(`You don't have permission to access this resource....`);
+                return error;
+            }
+
+            // bad request
+            case 400: {
+                return Promise.reject(error);
+            }
+
+            // not found
+            case 404: {
+                return Promise.reject(error);
+            }
+
+            // conflict
+            case 409: {
+                return Promise.reject(error);
+            }
+
+            // unprocessable
+            case 422: {
+                return Promise.reject(error);
+            }
+
+            // generic api error (server related) unexpected
+            default: {
+                return Promise.reject(error);
+            }
         }
-
-        const { data } = response;
-
-        if (data.hasOwnProperty('s') && data.hasOwnProperty('errmsg')) {
-            return Promise.reject(createError(response.status, data['s'], data['errmsg']));
-        }
-
-        if (data.hasOwnProperty('code') && data.hasOwnProperty('message')) {
-            return Promise.reject(createError(response.status, data['code'], data['message'], data['problems']));
-        }
-
-        return Promise.reject(createError(response.status));
-    }
+    },
 );
 
 export default instance;

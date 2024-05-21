@@ -1,0 +1,218 @@
+
+
+.section-share {
+    &.section-specialty {
+        background: #f5f5f5;
+    }
+
+    &.section-outstanding-doctor {
+        background: #f5f5f5;
+
+    }
+
+    &.section-about {
+        padding: 0 94px;
+        height: 400px;
+    }
+
+    .section-body {
+        height: 100%;
+        
+        .section-customize {
+            padding: 0 5px;
+
+            cursor: pointer;
+
+            &:hover {
+                .title-child {
+                    color: #48C4D3;
+                }
+            }
+            .bg-image {
+                // background: url('../../assets/specialty/xuong\ khop.png');
+
+                // background-position: center center;
+                // background-repeat: no-repeat;
+                // background-size: cover;
+                // background-color: #eee;
+                height: 150px;
+                width: auto;
+
+                &.section-specialty {
+                    // background: url('../../assets/specialty/xuong\ khop.png');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color: #eee;
+                }
+        
+                &.section-medical-facility {
+                    background: url('../../assets/medical-facility/co\ so\ viet\ duc.jpg');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color: #eee;
+        
+                }
+
+                &.section-outstanding-doctor {
+                    // background: url('../../assets/out-standing-doctor/flat-business-man-user-profile-avatar-icon-vector-4333097.jpg');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color: #eee;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                }
+
+                &.section-handbook {
+                    background: url('../../assets/handbook/171045-5-dia-chi-nha-khoa-nieng-rang-tra-gop-cho-sinh-vien-tai-ha-noi-bookingcare.png');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color: #eee;
+                }
+            }
+
+        }
+    }
+}
+
+.section-outstanding-doctor {
+    .outer-bg {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .section-customize {
+        padding: 5px;
+        
+        .customize-boder {
+            border: 1px solid orange;
+            padding: 20px;
+            height: 260px;
+        }
+    }
+}
+
+.section-share {
+    height: 330px;
+    
+    .section-container {
+        margin: 0 100px;
+
+        display: flex;
+        flex-direction: column;
+
+        .section-header {
+            height: 60px;
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+
+            .title-section {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .btn-section {
+                float: right;
+                padding: 10px 15px;
+                outline: none;
+                border: none;
+                display: block;
+                background-color: #ebebeb;
+                color: #333;
+                cursor: pointer;
+                text-transform: uppercase;
+                border-radius: 10px;
+
+                &:hover {
+                    color: #fff;
+                    background: #f7d800;
+                }
+            }
+        }
+
+       
+        
+    }
+}
+
+
+// reset slickslider css
+.slick-prev {
+    left: -10px !important;
+    z-index: 1000;
+
+    height: 48px !important;
+    width: 44px !important;
+
+    background-color: #fff !important;
+    border: 2px solid #d7d7d7 !important;
+
+    &:hover {
+        background-color: #eceaea !important;
+    }
+}
+
+.slick-prev::before, .slick-next::before {
+    color: red !important;
+    font-family: FontAwesome !important;
+    // content: "\e257" !important;
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 50 !important;
+}
+
+.slick-next {
+    right: -10px !important;
+    z-index: 1000;
+
+    height: 48px !important;
+    width: 44px !important;
+
+    background-color: #fff !important;
+    border: 2px solid #d7d7d7 !important;
+
+    &:hover {
+        background-color: #eceaea !important;
+    }
+}
+
+.slick-disabled {
+    display: none !important;
+}
+
+.section-about {
+    .section-about-header {
+        padding: 20px 10px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .section-about-body {
+        .content-right {
+            p {
+                text-align: justify;
+                font-style: italic;
+                padding: 15px 0;
+            }
+        }
+    }
+}
+
+.home-footer {
+    text-align: center;
+    padding-top: 8px;
+
+    a {
+        text-decoration: none;
+    }
+}

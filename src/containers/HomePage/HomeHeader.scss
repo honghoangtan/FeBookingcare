@@ -1,0 +1,232 @@
+
+
+.home-header-container {
+    padding: 5px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+
+    .home-header-content {
+        width: 100%;
+        height: 60px;
+        display: flex;
+
+        .left-content {
+            width: 20%;
+            display: flex;
+            justify-content: flex-start;
+
+            i {
+                margin-top: 7%;
+                font-size: 25px;
+                cursor: pointer;
+            }
+
+            @keyframes App-logo-spin {
+                from {
+                    transform: rotate(0deg);
+                }
+    
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            .header-logo {
+                margin-top: 7px;
+            }
+            .header-logo img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: transparent;
+                animation: App-logo-spin infinite 20s linear;
+            }
+        }
+
+        .center-content {
+            width: 60%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .child-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .subs-title {
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+            }
+
+        }
+
+        .right-content {
+            width: 20%;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .support {
+                padding-right: 20px;
+                cursor: pointer;
+                color: grey;
+
+                i {
+                    font-size: 15px;
+                    margin-right: 5px;
+                }
+            }
+
+            .language-vn {
+                cursor: pointer;
+                opacity: 0.2;
+                    &.active {
+                        opacity: 1;
+                        span {
+
+                            color: green;
+                        }
+
+                    }
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+
+            }
+
+            .language-en {
+                margin-left: 5px;
+                cursor: pointer;
+                opacity: 0.2;
+
+                &.active {
+                    opacity: 1;
+                    span {
+
+                        color: blue;
+                    }
+                }
+
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+.home-header-banner {
+    background: url(../../assets/images/bookingcare-cover-4.1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 485px;
+    padding: 15px 0;
+
+    .content-up {
+        margin-top: -15px;
+        background-image: linear-gradient(rgba(126, 126, 126, 0.25), rgba(255, 255, 255, 0.1));
+        height: 71%;
+    }
+
+    .description {
+        padding: 20px 0;
+        .title {
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 1px 1px 1px #333;
+            font-weight: 400;
+        }
+
+        .title + .title {
+            font-weight: 600;
+            margin-top: 5px;
+        }
+    }
+
+    .search {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 30px;
+        background: #f7d808;
+
+        input {
+            height: 30px;
+            width: 360px;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .content-down {
+        height: 36%;
+
+        border-radius: 1px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 10px;
+
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+        .options {
+            display: flex;
+            // align-items: center;
+            // justify-content: space-evenly;
+    
+            grid-gap: 50px;
+            justify-content: center;
+    
+            .option-child {
+    
+                cursor: pointer;
+    
+                .icon-child {
+                    background: #fff;
+                    text-align: center;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    margin: 0 auto;
+    
+                    i {
+                        color: #49bce2;
+                        font-size: 20px;
+                    }
+                }
+    
+                .text-child {
+                    text-align: center;
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-items: center;
+                    // font-size: 17px;
+                    // font-weight: 500;
+    
+                    &:hover {
+                        color: #49bce2;
+    
+                    }
+                }
+            }
+        }   
+    }
+
+    
+}

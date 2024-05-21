@@ -1,0 +1,65 @@
+
+
+.detail-clinic-container {
+    .infor-clinic {
+        padding: 0 30px;
+        background: #fff;
+        box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px;
+
+        border-radius: 3px;
+
+        .content-right {
+            .name-clinic {
+                font-size: 26px;
+                color: rgb(40, 49, 63);
+                font-weight: 700;
+            }
+            .address-clinic{
+                font-size: 18px;
+                color: rgb(40, 49, 63);
+                font-weight: 400;
+            }
+        }
+    }
+
+    .description-clinic {
+        padding: 0 30px;
+        background: #eee;
+
+    }
+
+    .each-doctor{
+        display: flex;
+        width: 100%;
+        // border: 1px solid green;
+        min-height: 200px;
+        padding: 10px;
+
+        background: #fff;
+        box-shadow: 0 1px 6px #20212447;
+        border-radius: 8px;
+
+        .dt-content-left {
+            width: 50%;
+        }
+
+        .dt-content-right {
+            width: 50%;
+            border-left: 1px solid #eeeeee;
+            padding: 5px;
+
+            .doctor-schedule {
+                .doctor-schedule-container {
+                    border: none;
+                }
+            }
+
+            .doctor-extra-infor {
+                .doctor-extra-infor-container {
+                    padding: 9px;
+                }
+            }
+        }
+    }
+}
+
